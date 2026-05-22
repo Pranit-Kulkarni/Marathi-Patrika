@@ -1,80 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Pranit ❤️ Mrudula</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- OPENING SCREEN -->
-<section class="opening">
+  <!-- OPENING SCREEN -->
 
-  <div class="invite-box">
+  <section class="opening">
 
-    <div class="seal" onclick="openInvite()">
-      🌸
+    <div class="overlay"></div>
+
+    <div class="opening-content">
+
+      <div class="seal" onclick="openInvite()">
+        🌸
+      </div>
+
+      <p class="tap-text">
+        TAP TO OPEN
+      </p>
+
     </div>
 
-    <p>Tap To Open</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+
+  <div id="content">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <img
+        src="assets/couple.jpg"
+        class="couple-image">
+
+        <h1>
+          Pranit & Mrudula
+        </h1>
+
+        <p class="subtitle">
+          Our Forever Begins
+        </p>
+
+        <div id="countdown"></div>
+
+      </div>
+
+      <div class="scroll-indicator">
+        Scroll ↓
+      </div>
+
+    </section>
+
+    <!-- MEHENDI -->
+
+    <section class="event mehendi">
+
+      <h2>Mehendi 🌿</h2>
+
+      <p class="date">
+        24 April 2026
+      </p>
+
+      <p class="venue">
+        The Grand Blossom Lawn
+      </p>
+
+      <p class="dress">
+        Dress Code: Shades of Green
+      </p>
+
+    </section>
+
+    <!-- HALDI -->
+
+    <section class="event haldi">
+
+      <h2>Haldi ✨</h2>
+
+      <p class="date">
+        25 April 2026
+      </p>
+
+      <p class="venue">
+        Heritage Courtyard
+      </p>
+
+      <p class="dress">
+        Dress Code: Yellow & Ivory
+      </p>
+
+    </section>
+
+    <!-- WEDDING -->
+
+    <section class="event wedding">
+
+      <h2>Wedding ❤️</h2>
+
+      <p class="date">
+        26 April 2026
+      </p>
+
+      <p class="venue">
+        Shree Ganesh Mangal Karyalaya
+      </p>
+
+      <p class="dress">
+        Muhurt: 9:12 AM
+      </p>
+
+    </section>
+
+    <!-- FINAL SECTION -->
+
+    <section class="final-section">
+
+      <div class="final-overlay"></div>
+
+      <div class="final-content">
+
+        <h1>
+          See You There
+        </h1>
+
+        <p class="subtitle">
+          With Love, Family & Blessings
+        </p>
+
+        <a
+        href="https://maps.google.com"
+        target="_blank"
+        class="venue-btn">
+
+        View Venue
+
+        </a>
+
+      </div>
+
+    </section>
 
   </div>
 
-</section>
+  <!-- JS -->
 
-<!-- MAIN CONTENT -->
-<div id="mainContent">
-
-  <!-- HERO -->
-  <section class="hero snap">
-
-    <img src="assets/couple.jpg" class="hero-img">
-
-    <h1>Pranit & Mrudula</h1>
-
-    <p>Our New Chapter Begins</p>
-
-    <div id="countdown"></div>
-
-  </section>
-
-  <!-- EVENT 1 -->
-  <section class="event snap">
-
-    <h2>Mehendi</h2>
-
-    <p>24 April 2026</p>
-
-    <p>Dress Code: Shades of Green</p>
-
-  </section>
-
-  <!-- EVENT 2 -->
-  <section class="event snap">
-
-    <h2>Haldi</h2>
-
-    <p>25 April 2026</p>
-
-    <p>Dress Code: Yellow</p>
-
-  </section>
-
-  <!-- EVENT 3 -->
-  <section class="event snap">
-
-    <h2>Wedding</h2>
-
-    <p>26 April 2026</p>
-
-  </section>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
