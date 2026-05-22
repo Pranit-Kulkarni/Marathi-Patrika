@@ -6,109 +6,86 @@
 
 html{
   scroll-behavior:smooth;
-  scroll-snap-type:y mandatory;
 }
 
 body{
   overflow-x:hidden;
-  font-family:'Cormorant Garamond', serif;
-  background:#fff;
-  color:#222;
-}
 
-/* COMMON */
+  font-family:'Poppins',sans-serif;
 
-section{
-
-  min-height:100vh;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  position:relative;
-
-  padding:30px;
-
-  scroll-snap-align:start;
+  background:black;
 }
 
 /* OPENING */
 
 .opening{
 
+  width:100%;
+  height:100vh;
+
   background:
   linear-gradient(
-  rgba(8,16,48,0.65),
-  rgba(8,16,48,0.65)
-  ),
+  rgba(7,15,40,0.9),
+  rgba(7,15,40,0.9)
+  );
 
-  url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1600&auto=format&fit=crop");
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-  background-size:cover;
-  background-position:center;
+  position:fixed;
+
+  z-index:9999;
 
   transition:1.5s ease;
-
-  z-index:999;
 }
 
-.opening-overlay{
-  position:absolute;
-  inset:0;
-}
-
-.opening-content{
-
-  position:relative;
-
-  z-index:2;
-
+.seal-container{
   text-align:center;
 }
 
 .seal{
 
-  width:160px;
-  height:160px;
+  width:150px;
+  height:150px;
 
   border-radius:50%;
 
   background:
   radial-gradient(circle at top,
-  #ff9e9e,
+  #f7c8c8,
   #8b0000);
 
   display:flex;
   justify-content:center;
   align-items:center;
 
-  font-size:58px;
+  color:white;
+
+  font-size:56px;
 
   cursor:pointer;
 
   box-shadow:
-  0 20px 50px rgba(0,0,0,0.45);
+  0 25px 60px rgba(0,0,0,0.5);
 
   transition:1.2s ease;
 }
 
-.seal:hover{
-  transform:scale(1.05);
-}
-
-.open-text{
+.tap-text{
 
   margin-top:28px;
 
   color:white;
 
-  font-size:20px;
+  letter-spacing:5px;
 
-  letter-spacing:4px;
+  font-size:14px;
+
+  opacity:0.8;
 }
 
-/* CONTENT */
+/* MAIN CONTENT */
 
 #content{
   display:none;
@@ -118,234 +95,220 @@ section{
 
 .hero{
 
-  background:
-  linear-gradient(
-  rgba(0,0,0,0.45),
-  rgba(0,0,0,0.45)
-  ),
+  width:100%;
+  height:100vh;
 
-  url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop");
-
-  background-size:cover;
-  background-position:center;
-
-  color:white;
-}
-
-.hero-overlay{
-  position:absolute;
-  inset:0;
-}
-
-.hero-content{
   position:relative;
-  z-index:2;
 
-  text-align:center;
+  overflow:hidden;
 }
 
 .hero-image{
 
-  width:220px;
-  height:320px;
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
 
   object-fit:cover;
 
-  border-radius:140px;
+  filter:
+  brightness(0.72)
+  blur(1px);
 
-  border:3px solid rgba(255,255,255,0.35);
+  transform:scale(1.05);
+}
 
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.45);
+.hero-overlay{
 
-  margin-bottom:30px;
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+  rgba(0,0,0,0.2),
+  rgba(0,0,0,0.5)
+  );
+}
+
+.hero-content{
+
+  position:relative;
+
+  z-index:2;
+
+  width:100%;
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  color:white;
+
+  padding:24px;
+}
+
+.top-line{
+
+  letter-spacing:4px;
+
+  font-size:14px;
+
+  margin-bottom:18px;
+
+  opacity:0.92;
+}
+
+.save-date{
+
+  letter-spacing:3px;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  margin-bottom:26px;
 }
 
 h1{
 
-  font-family:'Great Vibes', cursive;
+  font-family:'Great Vibes',cursive;
 
-  font-size:82px;
+  font-size:72px;
 
   font-weight:400;
 
-  margin-bottom:10px;
+  line-height:1;
+
+  margin-bottom:18px;
 }
 
-.hero-subtitle{
+.divider{
 
-  font-size:24px;
+  width:120px;
+  height:1px;
 
-  letter-spacing:2px;
+  background:white;
 
-  margin-bottom:25px;
-}
-
-#countdown{
-  font-size:30px;
-}
-
-.scroll-indicator{
-
-  position:absolute;
-
-  bottom:35px;
-
-  color:white;
-
-  animation:float 2s infinite;
-}
-
-@keyframes float{
-
-  0%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(10px);
-  }
-
-  100%{
-    transform:translateY(0);
-  }
-}
-
-/* CARD */
-
-.card{
-
-  background:rgba(255,255,255,0.72);
-
-  backdrop-filter:blur(14px);
-
-  border-radius:30px;
-
-  padding:50px 40px;
-
-  max-width:700px;
-
-  text-align:center;
-
-  box-shadow:
-  0 20px 60px rgba(0,0,0,0.08);
-}
-
-/* STORY */
-
-.story-section{
-
-  background:
-  linear-gradient(
-  rgba(255,255,255,0.82),
-  rgba(255,255,255,0.82)
-  ),
-
-  url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop");
-
-  background-size:cover;
-  background-position:center;
-}
-
-.story-section h2{
-  color:#8b0000;
-}
-
-/* EVENTS */
-
-.event{
-  text-align:center;
-}
-
-.event h2{
-
-  font-size:58px;
-
-  color:#8b0000;
-
-  margin-bottom:24px;
-}
-
-.event-date{
-
-  font-size:34px;
-
-  margin-bottom:16px;
-}
-
-.event-location{
-
-  font-size:24px;
+  margin-bottom:18px;
 
   opacity:0.8;
 }
 
-.dress-code{
+.quote{
 
-  margin-top:20px;
+  font-size:17px;
 
-  font-size:20px;
+  line-height:1.7;
+
+  letter-spacing:1px;
+
+  margin-bottom:34px;
+
+  opacity:0.95;
 }
 
-/* COLORS */
+.countdown-title{
 
-.mehendi{
-  background:#f5fff5;
+  font-size:15px;
+
+  letter-spacing:2px;
+
+  margin-bottom:22px;
+
+  opacity:0.85;
 }
 
-.haldi{
-  background:#fff8dc;
+/* COUNTDOWN */
+
+#countdown{
+
+  display:flex;
+
+  gap:16px;
+
+  margin-bottom:34px;
 }
 
-.wedding{
-  background:#fff1f5;
+.time-box{
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
 }
 
-/* FINAL */
+.time-box span{
 
-.final-section{
+  font-size:52px;
 
-  background:
-  linear-gradient(
-  rgba(0,0,0,0.55),
-  rgba(0,0,0,0.55)
-  ),
+  font-weight:600;
 
-  url("https://images.unsplash.com/photo-1513278974582-3e1b4a4fa21d?q=80&w=1600&auto=format&fit=crop");
-
-  background-size:cover;
-  background-position:center;
-
-  color:white;
+  line-height:1;
 }
 
-.final-content{
-  text-align:center;
+.time-box small{
+
+  margin-top:6px;
+
+  font-size:11px;
+
+  letter-spacing:2px;
 }
 
-.venue-btn{
+/* TEAMS */
 
-  display:inline-block;
-
-  margin-top:30px;
-
-  padding:16px 36px;
-
-  background:white;
-
-  color:black;
-
-  border-radius:40px;
-
-  text-decoration:none;
+.side-question{
 
   font-size:18px;
 
-  transition:0.3s;
+  margin-bottom:18px;
+
+  letter-spacing:1px;
 }
 
-.venue-btn:hover{
-  transform:scale(1.05);
+.teams{
+
+  display:flex;
+
+  gap:16px;
+
+  margin-bottom:28px;
+}
+
+.teams button{
+
+  padding:14px 30px;
+
+  border-radius:40px;
+
+  border:1px solid rgba(255,255,255,0.65);
+
+  background:rgba(255,255,255,0.08);
+
+  color:white;
+
+  font-size:14px;
+
+  letter-spacing:1px;
+
+  backdrop-filter:blur(10px);
+}
+
+.bottom-line{
+
+  font-size:14px;
+
+  letter-spacing:2px;
+
+  opacity:0.8;
 }
 
 /* MOBILE */
@@ -356,32 +319,18 @@ h1{
     font-size:58px;
   }
 
-  .hero-image{
-    width:190px;
-    height:280px;
-  }
-
-  .hero-subtitle{
-    font-size:20px;
+  .time-box span{
+    font-size:44px;
   }
 
   #countdown{
-    font-size:24px;
+    gap:12px;
   }
 
-  .event h2{
-    font-size:42px;
-  }
+  .teams button{
 
-  .event-date{
-    font-size:26px;
-  }
+    padding:12px 22px;
 
-  .event-location{
-    font-size:20px;
-  }
-
-  .card{
-    padding:40px 28px;
+    font-size:13px;
   }
 }

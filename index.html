@@ -6,31 +6,29 @@
   <meta charset="UTF-8" />
 
   <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"/>
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"/>
 
   <title>
-    Pranit ❤️ Mrudula
+    Pranit & Mrudula
   </title>
 
-  <!-- GOOGLE FONTS -->
+  <!-- Fonts -->
 
   <link rel="preconnect"
-  href="https://fonts.googleapis.com">
+    href="https://fonts.googleapis.com">
 
   <link rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin>
+    href="https://fonts.gstatic.com"
+    crossorigin>
 
-  <link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
 
-  <link
-  rel="stylesheet"
-  href="style.css">
+  <link rel="stylesheet"
+    href="style.css">
 
 </head>
 
@@ -39,190 +37,111 @@
   <!-- OPENING SCREEN -->
 
   <section
-  class="opening"
-  id="opening">
+    class="opening"
+    id="opening">
 
-    <div class="opening-overlay"></div>
-
-    <div class="opening-content">
+    <div class="seal-container">
 
       <div
-      class="seal"
-      onclick="openInvite()">
+        class="seal"
+        onclick="openInvite()">
 
-      🌸
+        ✿
 
       </div>
 
-      <h2 class="open-text">
-        Tap To Open
-      </h2>
+      <p class="tap-text">
+        TAP TO OPEN
+      </p>
 
     </div>
 
   </section>
 
-  <!-- MAIN WEBSITE -->
+  <!-- MAIN CONTENT -->
 
   <main id="content">
 
-    <!-- HERO -->
+    <!-- HERO PAGE -->
 
     <section class="hero">
+
+      <img
+        src="assets/couple.jpg"
+        class="hero-image">
 
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
 
-        <img
-        src="assets/couple.jpg"
-        alt="Couple"
-        class="hero-image">
+        <p class="top-line">
+          A NEW CHAPTER BEGINS
+        </p>
+
+        <p class="save-date">
+          SAVE THE DATE:
+          JULY 4, 2026
+        </p>
 
         <h1>
           Pranit & Mrudula
         </h1>
 
-        <p class="hero-subtitle">
-          Together With Their Families
+        <div class="divider"></div>
+
+        <p class="quote">
+          “Sabne Poocha ‘Kab?’<br>
+          Humne Bola ‘Ab!’”
         </p>
 
-        <div id="countdown"></div>
-
-      </div>
-
-      <div class="scroll-indicator">
-        Scroll ↓
-      </div>
-
-    </section>
-
-    <!-- STORY -->
-
-    <section class="story-section">
-
-      <div class="card">
-
-        <h2>
-          Our Story
-        </h2>
-
-        <p>
-          Two hearts.
-          One beautiful journey.
-          A bond built on laughter,
-          love and endless memories.
+        <p class="countdown-title">
+          Counting down to our big day
         </p>
 
-      </div>
+        <div id="countdown">
 
-    </section>
+          <div class="time-box">
+            <span id="days">0</span>
+            <small>DAYS</small>
+          </div>
 
-    <!-- MEHENDI -->
+          <div class="time-box">
+            <span id="hours">0</span>
+            <small>HOURS</small>
+          </div>
 
-    <section class="event mehendi">
+          <div class="time-box">
+            <span id="minutes">0</span>
+            <small>MINUTES</small>
+          </div>
 
-      <div class="card">
+          <div class="time-box">
+            <span id="seconds">0</span>
+            <small>SECONDS</small>
+          </div>
 
-        <h2>
-          Mehendi 🌿
-        </h2>
+        </div>
 
-        <p class="event-date">
-          24 April 2026
+        <p class="side-question">
+          Tum Kis Side Ho?
         </p>
 
-        <p class="event-location">
-          The Grand Blossom Lawn
+        <div class="teams">
+
+          <button>
+            Team Groom
+          </button>
+
+          <button>
+            Team Bride
+          </button>
+
+        </div>
+
+        <p class="bottom-line">
+          Think Fast...
+          Baraat Won’t Wait
         </p>
-
-        <p class="dress-code">
-          Dress Code:
-          Shades of Green
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- HALDI -->
-
-    <section class="event haldi">
-
-      <div class="card">
-
-        <h2>
-          Haldi ✨
-        </h2>
-
-        <p class="event-date">
-          25 April 2026
-        </p>
-
-        <p class="event-location">
-          Heritage Courtyard
-        </p>
-
-        <p class="dress-code">
-          Dress Code:
-          Yellow & Ivory
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- WEDDING -->
-
-    <section class="event wedding">
-
-      <div class="card">
-
-        <h2>
-          Wedding ❤️
-        </h2>
-
-        <p class="event-date">
-          26 April 2026
-        </p>
-
-        <p class="event-location">
-          Shree Ganesh Mangal Karyalaya
-        </p>
-
-        <p class="dress-code">
-          Muhurt:
-          9:12 AM
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- FINAL -->
-
-    <section class="final-section">
-
-      <div class="final-overlay"></div>
-
-      <div class="final-content">
-
-        <h1>
-          See You There
-        </h1>
-
-        <p class="hero-subtitle">
-          With Love, Family & Blessings
-        </p>
-
-        <a
-        href="https://maps.google.com"
-        target="_blank"
-        class="venue-btn">
-
-        View Venue
-
-        </a>
 
       </div>
 
@@ -233,12 +152,12 @@
   <!-- AUDIO -->
 
   <audio
-  id="bgMusic"
-  loop>
+    id="bgMusic"
+    loop>
 
     <source
-    src="assets/music.mp3"
-    type="audio/mp3">
+      src="assets/music.mp3"
+      type="audio/mp3">
 
   </audio>
 

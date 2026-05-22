@@ -1,10 +1,10 @@
 function openInvite(){
 
-  const seal =
-  document.querySelector(".seal");
-
   const opening =
   document.getElementById("opening");
+
+  const seal =
+  document.querySelector(".seal");
 
   const content =
   document.getElementById("content");
@@ -16,29 +16,30 @@ function openInvite(){
 
   music.volume = 0.25;
 
-  music.play().catch((err) => {
-    console.log("Audio blocked:", err);
+  music.play().catch((e)=>{
+    console.log(e);
   });
 
-  /* SEAL ANIMATION */
+  /* SEAL EFFECT */
 
   seal.style.transform =
-  "scale(12) rotate(25deg)";
+  "scale(18)";
 
-  seal.style.opacity = "0";
+  seal.style.opacity =
+  "0";
 
-  /* OPENING FADE */
+  /* FADE OUT */
 
-  opening.style.opacity = "0";
+  opening.style.opacity =
+  "0";
 
-  setTimeout(() => {
+  setTimeout(()=>{
 
-    opening.style.display = "none";
+    opening.style.display =
+    "none";
 
-    content.style.display = "block";
-
-    content.style.animation =
-    "fadeIn 1.5s ease";
+    content.style.display =
+    "block";
 
   },1200);
 }
@@ -46,9 +47,11 @@ function openInvite(){
 /* COUNTDOWN */
 
 const weddingDate =
-new Date("July 4, 2026 12:39:00").getTime();
+new Date(
+"July 4, 2026 12:39:00"
+).getTime();
 
-setInterval(() => {
+function updateCountdown(){
 
   const now =
   new Date().getTime();
@@ -57,32 +60,48 @@ setInterval(() => {
   weddingDate - now;
 
   const days =
-  Math.floor(distance / (1000 * 60 * 60 * 24));
+  Math.floor(
+  distance /
+  (1000 * 60 * 60 * 24)
+  );
 
-  document.getElementById("countdown").innerHTML =
-  days + " Days To Go ❤️";
+  const hours =
+  Math.floor(
+  (distance %
+  (1000 * 60 * 60 * 24)) /
+  (1000 * 60 * 60)
+  );
 
-},1000);
+  const minutes =
+  Math.floor(
+  (distance %
+  (1000 * 60 * 60)) /
+  (1000 * 60)
+  );
 
-/* FADE IN */
+  const seconds =
+  Math.floor(
+  (distance %
+  (1000 * 60)) /
+  1000
+  );
 
-const style =
-document.createElement("style");
+  document.getElementById("days").innerHTML =
+  days;
 
-style.innerHTML = `
+  document.getElementById("hours").innerHTML =
+  hours;
 
-@keyframes fadeIn{
+  document.getElementById("minutes").innerHTML =
+  minutes;
 
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  document.getElementById("seconds").innerHTML =
+  seconds;
 }
-`;
 
-document.head.appendChild(style);
+updateCountdown();
+
+setInterval(
+updateCountdown,
+1000
+);
