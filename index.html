@@ -1,170 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranit & Mrudula</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <title>
-    Pranit & Mrudula
-  </title>
-
-  <!-- Fonts -->
-
-  <link rel="preconnect"
-    href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap"
-    rel="stylesheet">
-
-  <!-- CSS -->
-
-  <link rel="stylesheet"
-    href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- OPENING SCREEN -->
+  <section class="landing" id="landing">
+    <div class="blue-invite">
+      <div class="ribbon"></div>
 
-  <section
-    class="opening"
-    id="opening">
-
-    <div class="seal-container">
-
-      <div
-        class="seal"
-        onclick="openInvite()">
-
+      <button class="seal" onclick="openInvite()" aria-label="Open invitation">
         ✿
+      </button>
 
-      </div>
-
-      <p class="tap-text">
-        TAP TO OPEN
-      </p>
-
+      <p class="welcome">Welcome</p>
+      <p class="tap">Tap the seal to open</p>
     </div>
-
   </section>
-
-  <!-- MAIN CONTENT -->
 
   <main id="content">
 
-    <!-- HERO PAGE -->
-
-    <section class="hero">
-
-      <img
-        src="assets/couple.jpg"
-        class="hero-image">
+    <section class="page hero reveal-page">
+      <img src="assets/couple.jpg" class="hero-image" alt="Pranit and Mrudula">
 
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
+        <p class="top-line reveal">A NEW CHAPTER BEGINS</p>
+        <p class="save-date reveal">SAVE THE DATE: JULY 4, 2026</p>
 
-        <p class="top-line">
-          A NEW CHAPTER BEGINS
-        </p>
+        <h1 class="reveal">Pranit & Mrudula</h1>
 
-        <p class="save-date">
-          SAVE THE DATE:
-          JULY 4, 2026
-        </p>
+        <div class="divider reveal"></div>
 
-        <h1>
-          Pranit & Mrudula
-        </h1>
-
-        <div class="divider"></div>
-
-        <p class="quote">
+        <p class="quote reveal">
           “Sabne Poocha ‘Kab?’<br>
           Humne Bola ‘Ab!’”
         </p>
 
-        <p class="countdown-title">
-          Counting down to our big day
-        </p>
+        <p class="countdown-title reveal">Counting down to our big day</p>
 
-        <div id="countdown">
-
-          <div class="time-box">
-            <span id="days">0</span>
-            <small>DAYS</small>
-          </div>
-
-          <div class="time-box">
-            <span id="hours">0</span>
-            <small>HOURS</small>
-          </div>
-
-          <div class="time-box">
-            <span id="minutes">0</span>
-            <small>MINUTES</small>
-          </div>
-
-          <div class="time-box">
-            <span id="seconds">0</span>
-            <small>SECONDS</small>
-          </div>
-
+        <div id="countdown" class="reveal">
+          <div><span id="days">0</span><small>DAYS</small></div>
+          <div><span id="hours">0</span><small>HOURS</small></div>
+          <div><span id="minutes">0</span><small>MINUTES</small></div>
+          <div><span id="seconds">0</span><small>SECONDS</small></div>
         </div>
 
-        <p class="side-question">
-          Tum Kis Side Ho?
-        </p>
-
-        <div class="teams">
-
-          <button>
-            Team Groom
-          </button>
-
-          <button>
-            Team Bride
-          </button>
-
-        </div>
-
-        <p class="bottom-line">
-          Think Fast...
-          Baraat Won’t Wait
-        </p>
-
+        <p class="scroll-hint">Scroll ↓</p>
       </div>
+    </section>
 
+    <section class="page events-page reveal-page">
+      <div class="flower-cloud top-right"></div>
+      <div class="flower-cloud bottom-left"></div>
+
+      <div class="events-content">
+        <p class="events-kicker reveal">LET THE CELEBRATIONS BEGIN</p>
+        <h2 class="reveal">Our Special Events</h2>
+        <p class="events-subtitle reveal">Multiple events, endless fun</p>
+
+        <div class="timeline">
+
+          <div class="event-card reveal">
+            <div class="event-icon">💍</div>
+            <div>
+              <h3>Engagement / Sangeet</h3>
+              <p class="event-time">July 3, 2026 · 6:00 PM - 9:00 PM</p>
+              <a href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">View location 📍</a>
+              <p class="event-note">An evening of rings, music, dance and celebration.</p>
+            </div>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="event-icon">❤️</div>
+            <div>
+              <h3>Wedding Day</h3>
+              <p class="event-time">July 4, 2026 · Muhurat 12:39 PM</p>
+              <a href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">View location 📍</a>
+              <p class="event-note">With your blessings, we begin our forever.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- AUDIO -->
-
-  <audio
-    id="bgMusic"
-    loop>
-
-    <source
-      src="assets/music.mp3"
-      type="audio/mp3">
-
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mp3">
   </audio>
 
-  <!-- JS -->
-
   <script src="script.js"></script>
-
 </body>
-
 </html>

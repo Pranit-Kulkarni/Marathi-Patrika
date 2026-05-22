@@ -1,107 +1,58 @@
 function openInvite(){
-
-  const opening =
-  document.getElementById("opening");
-
-  const seal =
-  document.querySelector(".seal");
-
-  const content =
-  document.getElementById("content");
-
-  const music =
-  document.getElementById("bgMusic");
-
-  /* PLAY MUSIC */
+  const landing = document.getElementById("landing");
+  const blueInvite = document.querySelector(".blue-invite");
+  const seal = document.querySelector(".seal");
+  const content = document.getElementById("content");
+  const music = document.getElementById("bgMusic");
 
   music.volume = 0.25;
+  music.play().catch((e)=>console.log("Audio blocked:", e));
 
-  music.play().catch((e)=>{
-    console.log(e);
-  });
-
-  /* SEAL EFFECT */
-
-  seal.style.transform =
-  "scale(18)";
-
-  seal.style.opacity =
-  "0";
-
-  /* FADE OUT */
-
-  opening.style.opacity =
-  "0";
+  seal.classList.add("opening");
+  blueInvite.classList.add("opening");
 
   setTimeout(()=>{
-
-    opening.style.display =
-    "none";
-
-    content.style.display =
-    "block";
-
-  },1200);
+    landing.style.display = "none";
+    content.style.display = "block";
+    document.querySelector(".hero").scrollIntoView();
+    triggerReveal();
+  }, 1050);
 }
 
-/* COUNTDOWN */
-
-const weddingDate =
-new Date(
-"July 4, 2026 12:39:00"
-).getTime();
+const weddingDate = new Date("July 4, 2026 12:39:00").getTime();
 
 function updateCountdown(){
-
-  const now =
-  new Date().getTime();
-
-  const distance =
-  weddingDate - now;
-
-  const days =
-  Math.floor(
-  distance /
-  (1000 * 60 * 60 * 24)
-  );
-
-  const hours =
-  Math.floor(
-  (distance %
-  (1000 * 60 * 60 * 24)) /
-  (1000 * 60 * 60)
-  );
-
-  const minutes =
-  Math.floor(
-  (distance %
-  (1000 * 60 * 60)) /
-  (1000 * 60)
-  );
-
-  const seconds =
-  Math.floor(
-  (distance %
-  (1000 * 60)) /
-  1000
-  );
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
 
   document.getElementById("days").innerHTML =
-  days;
+    Math.max(0, Math.floor(distance / (1000 * 60 * 60 * 24)));
 
   document.getElementById("hours").innerHTML =
-  hours;
+    Math.max(0, Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
 
   document.getElementById("minutes").innerHTML =
-  minutes;
+    Math.max(0, Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
 
   document.getElementById("seconds").innerHTML =
-  seconds;
+    Math.max(0, Math.floor((distance % (1000 * 60)) / 1000));
+}
+
+function triggerReveal(){
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.querySelectorAll(".reveal").forEach((el, index)=>{
+          setTimeout(()=>el.classList.add("show"), index * 90);
+        });
+      }
+    });
+  }, { threshold:0.55 });
+
+  document.querySelectorAll(".reveal-page").forEach(section=>{
+    observer.observe(section);
+  });
 }
 
 updateCountdown();
-
-setInterval(
-updateCountdown,
-1000
-);
+setInterval(updateCountdown, 1000);
