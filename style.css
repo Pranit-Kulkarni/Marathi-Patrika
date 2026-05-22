@@ -12,13 +12,14 @@ html{
 body{
   overflow-x:hidden;
   font-family:'Cormorant Garamond', serif;
-  background:#ffffff;
+  background:#fff;
   color:#222;
 }
 
 /* COMMON */
 
 section{
+
   min-height:100vh;
 
   display:flex;
@@ -27,9 +28,9 @@ section{
 
   position:relative;
 
-  scroll-snap-align:start;
-
   padding:30px;
+
+  scroll-snap-align:start;
 }
 
 /* OPENING */
@@ -38,8 +39,8 @@ section{
 
   background:
   linear-gradient(
-  rgba(10,18,50,0.65),
-  rgba(10,18,50,0.65)
+  rgba(8,16,48,0.65),
+  rgba(8,16,48,0.65)
   ),
 
   url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1600&auto=format&fit=crop");
@@ -47,19 +48,20 @@ section{
   background-size:cover;
   background-position:center;
 
-  z-index:1000;
-
   transition:1.5s ease;
+
+  z-index:999;
 }
 
 .opening-overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.2);
 }
 
 .opening-content{
+
   position:relative;
+
   z-index:2;
 
   text-align:center;
@@ -96,16 +98,17 @@ section{
 }
 
 .open-text{
+
   margin-top:28px;
 
   color:white;
 
-  letter-spacing:4px;
-
   font-size:20px;
+
+  letter-spacing:4px;
 }
 
-/* MAIN CONTENT */
+/* CONTENT */
 
 #content{
   display:none;
@@ -117,16 +120,14 @@ section{
 
   background:
   linear-gradient(
-  rgba(0,0,0,0.5),
-  rgba(0,0,0,0.5)
+  rgba(0,0,0,0.45),
+  rgba(0,0,0,0.45)
   ),
 
   url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop");
 
   background-size:cover;
   background-position:center;
-
-  overflow:hidden;
 
   color:white;
 }
@@ -145,8 +146,8 @@ section{
 
 .hero-image{
 
-  width:240px;
-  height:340px;
+  width:220px;
+  height:320px;
 
   object-fit:cover;
 
@@ -177,7 +178,7 @@ h1{
 
   letter-spacing:2px;
 
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 #countdown{
@@ -188,11 +189,9 @@ h1{
 
   position:absolute;
 
-  bottom:40px;
+  bottom:35px;
 
   color:white;
-
-  letter-spacing:2px;
 
   animation:float 2s infinite;
 }
@@ -212,7 +211,7 @@ h1{
   }
 }
 
-/* CARDS */
+/* CARD */
 
 .card{
 
@@ -220,7 +219,7 @@ h1{
 
   backdrop-filter:blur(14px);
 
-  border-radius:32px;
+  border-radius:30px;
 
   padding:50px 40px;
 
@@ -238,8 +237,8 @@ h1{
 
   background:
   linear-gradient(
-  rgba(255,255,255,0.8),
-  rgba(255,255,255,0.8)
+  rgba(255,255,255,0.82),
+  rgba(255,255,255,0.82)
   ),
 
   url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop");
@@ -255,7 +254,7 @@ h1{
 /* EVENTS */
 
 .event{
-  background:#fff7f4;
+  text-align:center;
 }
 
 .event h2{
@@ -283,14 +282,12 @@ h1{
 
 .dress-code{
 
-  margin-top:24px;
+  margin-top:20px;
 
   font-size:20px;
-
-  letter-spacing:1px;
 }
 
-/* EVENT COLORS */
+/* COLORS */
 
 .mehendi{
   background:#f5fff5;
@@ -323,9 +320,6 @@ h1{
 }
 
 .final-content{
-  position:relative;
-  z-index:2;
-
   text-align:center;
 }
 
@@ -347,7 +341,7 @@ h1{
 
   font-size:18px;
 
-  transition:0.3s ease;
+  transition:0.3s;
 }
 
 .venue-btn:hover{
@@ -388,6 +382,6 @@ h1{
   }
 
   .card{
-    padding:40px 26px;
+    padding:40px 28px;
   }
 }

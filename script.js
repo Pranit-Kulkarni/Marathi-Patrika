@@ -9,7 +9,18 @@ function openInvite(){
   const content =
   document.getElementById("content");
 
-  /* SEAL EXPANSION */
+  const music =
+  document.getElementById("bgMusic");
+
+  /* PLAY MUSIC */
+
+  music.volume = 0.25;
+
+  music.play().catch((err) => {
+    console.log("Audio blocked:", err);
+  });
+
+  /* SEAL ANIMATION */
 
   seal.style.transform =
   "scale(12) rotate(25deg)";
@@ -53,7 +64,7 @@ setInterval(() => {
 
 },1000);
 
-/* PAGE FADE */
+/* FADE IN */
 
 const style =
 document.createElement("style");
