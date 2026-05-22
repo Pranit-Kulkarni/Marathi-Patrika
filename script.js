@@ -1,7 +1,22 @@
 function openInvite(){
 
+  const seal =
+  document.querySelector(".seal");
+
   const opening =
-  document.querySelector(".opening");
+  document.getElementById("opening");
+
+  const content =
+  document.getElementById("content");
+
+  /* SEAL EXPANSION */
+
+  seal.style.transform =
+  "scale(12) rotate(25deg)";
+
+  seal.style.opacity = "0";
+
+  /* OPENING FADE */
 
   opening.style.opacity = "0";
 
@@ -9,16 +24,18 @@ function openInvite(){
 
     opening.style.display = "none";
 
-    document.getElementById("content").style.display =
-    "block";
+    content.style.display = "block";
 
-  },1000);
+    content.style.animation =
+    "fadeIn 1.5s ease";
+
+  },1200);
 }
 
 /* COUNTDOWN */
 
 const weddingDate =
-new Date("April 26, 2026 09:00:00").getTime();
+new Date("July 4, 2026 12:39:00").getTime();
 
 setInterval(() => {
 
@@ -35,3 +52,26 @@ setInterval(() => {
   days + " Days To Go ❤️";
 
 },1000);
+
+/* PAGE FADE */
+
+const style =
+document.createElement("style");
+
+style.innerHTML = `
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+`;
+
+document.head.appendChild(style);
