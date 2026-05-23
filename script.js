@@ -1,22 +1,24 @@
 function openInvite(){
   const landing = document.getElementById("landing");
-  const blueInvite = document.querySelector(".blue-invite");
-  const seal = document.querySelector(".seal");
+  const cover = document.querySelector(".cover");
   const content = document.getElementById("content");
   const music = document.getElementById("bgMusic");
 
   music.volume = 0.25;
   music.play().catch((e)=>console.log("Audio blocked:", e));
 
-  seal.classList.add("opening");
-  blueInvite.classList.add("opening");
+  cover.classList.add("open");
+
+  setTimeout(()=>{
+    landing.style.opacity = "0";
+  }, 1050);
 
   setTimeout(()=>{
     landing.style.display = "none";
     content.style.display = "block";
-    document.querySelector(".hero").scrollIntoView();
+    window.scrollTo(0, 0);
     triggerReveal();
-  }, 1050);
+  }, 1500);
 }
 
 const weddingDate = new Date("July 4, 2026 12:39:00").getTime();
