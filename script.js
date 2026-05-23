@@ -1,6 +1,6 @@
 function openInvite(){
   const landing = document.getElementById("landing");
-  const cover = document.querySelector(".cover");
+  const cover = document.querySelector(".invitation-cover");
   const content = document.getElementById("content");
   const music = document.getElementById("bgMusic");
 
