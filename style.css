@@ -24,7 +24,7 @@ body{
   overflow:hidden;
 }
 
-/* COVER LANDING - SIDE FLAP STYLE */
+/* COVER LANDING */
 
 .landing{
   position:fixed;
@@ -38,180 +38,116 @@ body{
   transition:1s ease;
 }
 
-.invitation-cover{
+.cover{
   width:min(92vw,430px);
   height:min(92vh,760px);
   position:relative;
   overflow:hidden;
-  background:#f8f8f3;
+  background:#1b2f34;
   box-shadow:0 30px 80px rgba(0,0,0,.28);
-  border-radius:2px;
 }
 
-/* RIGHT PRINTED INVITE */
-
-.printed-side{
+.inner-card{
   position:absolute;
-  inset:0 0 0 auto;
-  width:58%;
-  height:100%;
-  background:
-    linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.9)),
-    radial-gradient(circle at 80% 20%, rgba(120,160,190,.35), transparent 34%);
-  color:#2c3440;
-  padding:70px 28px 40px;
+  inset:0;
+  z-index:1;
+  background:#1b2f34;
+  color:#d8b56d;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  border-right:5px solid #203d65;
-  overflow:hidden;
+  padding:36px;
 }
 
-.printed-side::after{
-  content:"";
-  position:absolute;
-  inset:16px;
-  border:1px solid rgba(32,61,101,.45);
-  pointer-events:none;
-}
-
-.blue-flowers{
-  position:absolute;
-  top:-12px;
-  right:-12px;
-  width:190px;
-  height:190px;
-  opacity:.75;
-  background:
-    radial-gradient(circle at 30% 32%, #244f75 0 13px, transparent 14px),
-    radial-gradient(circle at 44% 18%, #527fa4 0 12px, transparent 13px),
-    radial-gradient(circle at 62% 32%, #244f75 0 16px, transparent 17px),
-    radial-gradient(circle at 72% 52%, #37668e 0 13px, transparent 14px),
-    radial-gradient(circle at 42% 55%, #ffffff 0 8px, transparent 9px),
-    radial-gradient(circle at 58% 68%, #ffffff 0 7px, transparent 8px);
-  filter:drop-shadow(0 3px 2px rgba(0,0,0,.12));
+.monogram{
+  width:58px;
+  height:58px;
+  border:1px solid rgba(216,181,109,.45);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px;
+  margin-bottom:34px;
 }
 
 .cover-kicker{
-  position:relative;
-  z-index:2;
-  margin-top:80px;
-  font-size:11px;
-  letter-spacing:4px;
-  color:#516073;
+  letter-spacing:8px;
+  font-size:13px;
+  margin-bottom:36px;
+  opacity:.9;
 }
 
-.printed-names{
-  position:relative;
-  z-index:2;
+.cover-names{
   font-family:'Great Vibes', cursive;
-  font-size:48px;
-  line-height:.8;
+  font-size:76px;
+  line-height:.92;
   font-weight:400;
-  color:#202936;
-  margin:28px 0;
+  margin-bottom:40px;
 }
 
-.printed-names span{
-  font-size:32px;
+.cover-date{
+  letter-spacing:5px;
+  font-size:14px;
+  margin-bottom:16px;
 }
 
-.printed-date,
-.printed-venue{
-  position:relative;
-  z-index:2;
-  font-family:'Cormorant Garamond', serif;
-  font-size:15px;
-  color:#394353;
-  margin-top:14px;
+.cover-venue{
+  letter-spacing:3px;
+  font-size:12px;
+  opacity:.8;
 }
 
-/* LEFT BLUE FLAP */
-
-.left-flap{
+.cover-half{
   position:absolute;
-  left:0;
   top:0;
-  width:58%;
+  width:50%;
   height:100%;
   z-index:3;
   background:
-    linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,0)),
-    repeating-radial-gradient(circle, rgba(255,255,255,.18) 0 1px, transparent 1px 5px),
-    #3e6475;
-  border-radius:0 18px 18px 0;
-  box-shadow:16px 0 28px rgba(0,0,0,.18);
-  transform-origin:left center;
+    linear-gradient(rgba(245,245,238,.58), rgba(245,245,238,.58)),
+    repeating-radial-gradient(circle, rgba(255,255,255,.35) 0 1px, transparent 1px 5px);
+  backdrop-filter:blur(7px);
   transition:1.45s cubic-bezier(.76,0,.24,1);
 }
 
-.invitation-cover.open .left-flap{
-  transform:rotateY(-112deg);
+.left-door{
+  left:0;
+  transform-origin:left center;
+  border-right:1px solid rgba(0,0,0,.35);
 }
 
-/* STRINGS */
-
-.cord{
-  position:absolute;
-  left:-14%;
-  top:50%;
-  width:118%;
-  height:4px;
-  z-index:4;
-  background:
-    repeating-linear-gradient(
-      45deg,
-      #d9c5a1 0 4px,
-      #80653f 4px 7px
-    );
-  border-radius:20px;
-  box-shadow:0 2px 5px rgba(0,0,0,.25);
-  transform-origin:50% 50%;
-  transition:1.25s ease;
+.right-door{
+  right:0;
+  transform-origin:right center;
+  border-left:1px solid rgba(255,255,255,.3);
 }
 
-.cord-1{
-  transform:translateY(-36px) rotate(8deg);
+.cover.open .left-door{
+  transform:rotateY(-105deg);
 }
 
-.cord-2{
-  transform:translateY(0) rotate(-4deg);
+.cover.open .right-door{
+  transform:rotateY(105deg);
 }
-
-.cord-3{
-  transform:translateY(36px) rotate(-12deg);
-}
-
-.invitation-cover.open .cord-1{
-  transform:translateY(-36px) rotate(22deg) translateX(-120%);
-  opacity:0;
-}
-
-.invitation-cover.open .cord-2{
-  transform:translateY(0) rotate(0deg) translateX(-120%);
-  opacity:0;
-}
-
-.invitation-cover.open .cord-3{
-  transform:translateY(36px) rotate(-22deg) translateX(-120%);
-  opacity:0;
-}
-
-/* SEAL */
 
 .cover-seal{
   position:absolute;
   z-index:5;
   top:50%;
-  left:47%;
+  left:50%;
   transform:translate(-50%,-50%);
-  width:104px;
-  height:104px;
+  width:96px;
+  height:96px;
   border-radius:50%;
   border:0;
-  background:
-    radial-gradient(circle at 32% 25%, #d8b56f, #92703c 62%, #5d3e19);
-  color:#34210c;
+  background:radial-gradient(circle at 32% 25%, #d1ad6e, #8c6635 62%, #5b3b19);
+  color:#3b2610;
   font-family:'Cormorant Garamond', serif;
-  font-size:38px;
+  font-size:26px;
   font-weight:600;
   cursor:pointer;
   box-shadow:
@@ -228,8 +164,8 @@ body{
   border:1px solid rgba(70,40,10,.45);
 }
 
-.invitation-cover.open .cover-seal{
-  transform:translate(-50%,-50%) scale(.35);
+.cover.open .cover-seal{
+  transform:translate(-50%,-50%) scale(.4);
   opacity:0;
 }
 
@@ -239,13 +175,12 @@ body{
   z-index:6;
   width:100%;
   text-align:center;
-  color:rgba(255,255,255,.82);
+  color:rgba(255,255,255,.75);
   letter-spacing:3px;
   font-size:12px;
-  text-shadow:0 2px 8px rgba(0,0,0,.35);
 }
 
-.invitation-cover.open .tap{
+.cover.open .tap{
   opacity:0;
 }
 
