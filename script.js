@@ -1,24 +1,21 @@
 function openInvite(){
   const landing = document.getElementById("landing");
-  const cover = document.querySelector(".cover");
+  const seal = document.querySelector(".cover-seal");
   const content = document.getElementById("content");
   const music = document.getElementById("bgMusic");
 
   music.volume = 0.25;
   music.play().catch((e)=>console.log("Audio blocked:", e));
 
-  cover.classList.add("open");
-
-  setTimeout(()=>{
-    landing.style.opacity = "0";
-  }, 1050);
+  seal.classList.add("seal-open");
+  landing.classList.add("landing-open");
 
   setTimeout(()=>{
     landing.style.display = "none";
     content.style.display = "block";
     window.scrollTo(0, 0);
     triggerReveal();
-  }, 1500);
+  }, 1200);
 }
 
 const weddingDate = new Date("July 4, 2026 12:39:00").getTime();
@@ -49,7 +46,7 @@ function triggerReveal(){
         });
       }
     });
-  }, { threshold:0.55 });
+  }, { threshold:0.45 });
 
   document.querySelectorAll(".reveal-page").forEach(section=>{
     observer.observe(section);

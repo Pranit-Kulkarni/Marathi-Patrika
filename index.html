@@ -5,106 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pranit & Mrudula</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<section class="landing" id="landing">
-  <div class="cover">
+  <!-- OPENING IMAGE PAGE -->
+  <section id="landing" class="image-page opening-page">
+    <img src="assets/background.jpg" class="page-image" alt="Opening invitation">
 
-    <div class="cover-half left-door"></div>
-    <div class="cover-half right-door"></div>
-
-    <div class="inner-card">
-      <p class="monogram">P · M</p>
-      <p class="cover-kicker">THE WEDDING OF</p>
-      <h1 class="cover-names">Pranit<br>& Mrudula</h1>
-      <p class="cover-date">JULY 4, 2026</p>
-      <p class="cover-venue">Wedding Muhurat · 12:39 PM</p>
-    </div>
-
-    <button class="cover-seal" onclick="openInvite()" aria-label="Open invitation">
-      PM
+    <button class="seal-button" onclick="openInvite()">
+      ✿
     </button>
+  </section>
 
-    <p class="tap">Tap seal to open</p>
-
-  </div>
-</section>
-
+  <!-- INSIDE IMAGE PAGE -->
   <main id="content">
+    <section class="image-page inside-page">
+      <img src="assets/inside_image.jpg" class="page-image" alt="Wedding invitation">
 
-    <section class="page hero reveal-page">
-      <img src="assets/couple.jpg" class="hero-image" alt="Pranit and Mrudula">
+      <div class="matter">
+        <h1>Pranit & Mrudula</h1>
 
-      <div class="hero-overlay"></div>
+        <p>Saturday, 4th July 2026</p>
+        <p>Muhurat · 12:39 PM</p>
 
-      <div class="hero-content">
-        <p class="top-line reveal">A NEW CHAPTER BEGINS</p>
-        <p class="save-date reveal">SAVE THE DATE: JULY 4, 2026</p>
-
-        <h1 class="reveal">Pranit & Mrudula</h1>
-
-        <div class="divider reveal"></div>
-
-        <p class="quote reveal">
-          “Sabne Poocha ‘Kab?’<br>
-          Humne Bola ‘Ab!’”
-        </p>
-
-        <p class="countdown-title reveal">Counting down to our big day</p>
-
-        <div id="countdown" class="reveal">
+        <div id="countdown">
           <div><span id="days">0</span><small>DAYS</small></div>
           <div><span id="hours">0</span><small>HOURS</small></div>
           <div><span id="minutes">0</span><small>MINUTES</small></div>
           <div><span id="seconds">0</span><small>SECONDS</small></div>
         </div>
 
-        <p class="scroll-hint">Scroll ↓</p>
+        <a href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">
+          View Location 📍
+        </a>
       </div>
     </section>
-
-    <section class="page events-page reveal-page">
-      <div class="flower-cloud top-right"></div>
-      <div class="flower-cloud bottom-left"></div>
-
-      <div class="events-content">
-        <p class="events-kicker reveal">LET THE CELEBRATIONS BEGIN</p>
-        <h2 class="reveal">Our Special Events</h2>
-        <p class="events-subtitle reveal">Multiple events, endless fun</p>
-
-        <div class="timeline">
-
-          <div class="event-card reveal">
-            <div class="event-icon">💍</div>
-            <div>
-              <h3>Engagement / Sangeet</h3>
-              <p class="event-time">July 3, 2026 · 6:00 PM - 9:00 PM</p>
-              <a href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">View location 📍</a>
-              <p class="event-note">An evening of rings, music, dance and celebration.</p>
-            </div>
-          </div>
-
-          <div class="event-card reveal">
-            <div class="event-icon">❤️</div>
-            <div>
-              <h3>Wedding Day</h3>
-              <p class="event-time">July 4, 2026 · Muhurat 12:39 PM</p>
-              <a href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">View location 📍</a>
-              <p class="event-note">With your blessings, we begin our forever.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <audio id="bgMusic" loop>
