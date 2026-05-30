@@ -1,21 +1,17 @@
 function openInvite(){
-  const landing = document.getElementById("landing");
-  const seal = document.querySelector(".cover-seal");
-  const content = document.getElementById("content");
+  const page1 = document.getElementById("page1");
+  const page2 = document.getElementById("page2");
   const music = document.getElementById("bgMusic");
 
   music.volume = 0.25;
   music.play().catch((e)=>console.log("Audio blocked:", e));
 
-  seal.classList.add("seal-open");
-  landing.classList.add("landing-open");
+  page1.classList.add("opening");
 
   setTimeout(()=>{
-    landing.style.display = "none";
-    content.style.display = "block";
-    window.scrollTo(0, 0);
-    triggerReveal();
-  }, 1200);
+    page1.style.display = "none";
+    page2.style.display = "block";
+  }, 900);
 }
 
 const weddingDate = new Date("July 4, 2026 12:39:00").getTime();
@@ -35,22 +31,6 @@ function updateCountdown(){
 
   document.getElementById("seconds").innerHTML =
     Math.max(0, Math.floor((distance % (1000 * 60)) / 1000));
-}
-
-function triggerReveal(){
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.querySelectorAll(".reveal").forEach((el, index)=>{
-          setTimeout(()=>el.classList.add("show"), index * 90);
-        });
-      }
-    });
-  }, { threshold:0.45 });
-
-  document.querySelectorAll(".reveal-page").forEach(section=>{
-    observer.observe(section);
-  });
 }
 
 updateCountdown();

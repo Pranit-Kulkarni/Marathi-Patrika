@@ -5,30 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pranit & Mrudula</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- OPENING IMAGE PAGE -->
-  <section id="landing" class="image-page opening-page">
-    <img src="assets/background.jpg" class="page-image" alt="Opening invitation">
+  <!-- PAGE 1 -->
+  <section id="page1" class="page page-one">
+    <img src="assets/background.jpg" class="bg-img" alt="Opening invite">
 
-    <button class="seal-button" onclick="openInvite()">
-      ✿
-    </button>
+    <div class="page-one-content">
+      <h1>Pranit<br>&<br>Mrudula</h1>
+
+      <button type="button" class="open-btn" onclick="openInvite()">
+        Open Invitation
+      </button>
+    </div>
   </section>
 
-  <!-- INSIDE IMAGE PAGE -->
-  <main id="content">
-    <section class="image-page inside-page">
-      <img src="assets/inside_image.jpg" class="page-image" alt="Wedding invitation">
+  <!-- PAGE 2 -->
+  <main id="page2">
+    <section class="page page-two">
+      <img src="assets/inside_image.jpg" class="bg-img" alt="Wedding invite">
 
       <div class="matter">
+        <p class="ganesh">॥ श्री गणेशाय नमः ॥</p>
+
+        <p class="small-text">With the blessings of our families</p>
+
         <h1>Pranit & Mrudula</h1>
 
-        <p>Saturday, 4th July 2026</p>
-        <p>Muhurat · 12:39 PM</p>
+        <div class="divider"></div>
+
+        <p class="date">Saturday, 4th July 2026</p>
+        <p class="muhurat">Muhurat · 12:39 PM</p>
 
         <div id="countdown">
           <div><span id="days">0</span><small>DAYS</small></div>
@@ -37,7 +51,7 @@
           <div><span id="seconds">0</span><small>SECONDS</small></div>
         </div>
 
-        <a href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">
+        <a class="location-btn" href="https://share.google/a6bNXOxOQigWAY6E9" target="_blank">
           View Location 📍
         </a>
       </div>
