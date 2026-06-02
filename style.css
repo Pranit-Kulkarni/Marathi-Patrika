@@ -176,6 +176,8 @@ html, body{
   background:rgba(255,255,255,.48);
 }
 
+
+
 @media(max-width:768px){
   .page-one-content h1{
     font-size:56px;
@@ -202,4 +204,68 @@ html, body{
   #countdown span{
     font-size:23px;
   }
+
+}
+
+.marathi-matter{
+  color:#6d3f12;
+  justify-content:center;
+  padding-top:20px;
+}
+
+.marathi-matter .ganesh{
+  font-size:13px;
+  margin-bottom:4px;
+}
+
+.marathi-matter .intro{
+  font-size:13px;
+  line-height:1.5;
+  margin:12px 0;
+}
+
+.marathi-matter h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:30px;
+  font-weight:600;
+  margin:8px 0;
+}
+
+.marathi-matter h2{
+  font-size:34px;
+  margin:14px 0;
+  color:#8b0000;
+}
+
+.parent{
+  font-size:12px;
+  line-height:1.4;
+}
+
+.and{
+  font-size:18px;
+  margin:8px 0;
+}
+
+.main-text{
+  font-size:13px;
+  line-height:1.65;
+  margin:10px 0;
+}
+
+.venue-title{
+  font-size:15px;
+  font-weight:600;
+  margin-top:12px;
+}
+
+.venue{
+  font-size:12px;
+  line-height:1.5;
+}
+
+.family{
+  font-size:13px;
+  margin-top:14px;
+  line-height:1.5;
 }
