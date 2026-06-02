@@ -45,29 +45,28 @@ html, body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  color:#6b3f12;
+  color:#704314;
   padding:24px;
 }
 
 .page-one-content h1{
-  font-family:'Great Vibes', cursive;
-  font-size:68px;
-  line-height:.95;
+  font-family:'Yatra One', serif;
+  font-size:48px;
+  line-height:1.35;
   font-weight:400;
-  margin-top:100px;
-  margin-bottom:42px;
+  margin-top:80px;
+  margin-bottom:36px;
   text-shadow:0 2px 8px rgba(255,255,255,.45);
 }
 
 .open-btn{
   border:none;
-  padding:14px 34px;
+  padding:13px 32px;
   border-radius:40px;
   background:linear-gradient(135deg, #d9a441, #8b5a12);
   color:white;
-  font-family:'Cormorant Garamond', serif;
+  font-family:'Tiro Devanagari Marathi', serif;
   font-size:18px;
-  letter-spacing:1px;
   cursor:pointer;
   box-shadow:0 10px 24px rgba(0,0,0,.25);
   z-index:20;
@@ -88,82 +87,86 @@ html, body{
   z-index:1;
 }
 
+/* IMPORTANT: content box aligned inside white arch space */
+
 .matter{
-  position:relative;
+  position:absolute;
   z-index:5;
-  width:82%;
-  max-width:430px;
-  margin:0 auto;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+
+  top:7.8%;
+  left:50%;
+  transform:translateX(-50%);
+
+  width:68%;
+  max-width:405px;
+
   text-align:center;
   color:#6d3f12;
-  font-family:'Cormorant Garamond', serif;
-  padding-top:50px;
+
+  font-family:'Tiro Devanagari Marathi', serif;
 }
+
+/* TEXT SIZING */
 
 .ganesh{
-  font-size:15px;
-  margin-bottom:28px;
+  font-size:12px;
+  line-height:1.25;
+  margin-bottom:2px;
 }
 
-.small-text{
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:13px;
-  line-height:1.7;
-  margin-bottom:28px;
+.intro{
+  font-size:11.5px;
+  line-height:1.35;
+  margin:7px 0 10px;
 }
 
-.matter h1{
-  font-family:'Great Vibes', cursive;
-  font-size:56px;
+.name{
+  font-family:'Yatra One', serif;
+  font-size:27px;
+  line-height:1.2;
   font-weight:400;
-  line-height:1.05;
-  margin-bottom:18px;
+  margin:5px 0;
+  color:#6d3f12;
 }
 
-.divider{
-  width:130px;
-  height:1px;
-  background:#b58b4b;
-  margin-bottom:24px;
+.parent{
+  font-size:11px;
+  line-height:1.35;
+  margin-bottom:5px;
 }
 
-.date{
-  font-size:20px;
-  margin-bottom:10px;
+.and{
+  font-size:17px;
+  line-height:1;
+  margin:7px 0;
 }
 
-.muhurat{
-  font-size:19px;
-  margin-bottom:24px;
+.title{
+  font-family:'Yatra One', serif;
+  font-size:34px;
+  line-height:1.1;
+  margin:12px 0 18px;
+  color:#8b1111;
+  font-weight:400;
 }
 
-#countdown{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  margin:10px 0 26px;
+.main-text{
+  font-size:12.5px;
+  line-height:1.55;
+  margin:9px 0;
 }
 
-#countdown div{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-#countdown span{
-  font-size:28px;
+.venue-title{
+  font-size:15px;
   font-weight:600;
+  margin-top:13px;
+  margin-bottom:4px;
 }
 
-#countdown small{
-  font-size:9px;
-  letter-spacing:1px;
+.venue{
+  font-size:11.5px;
+  line-height:1.42;
+  margin-bottom:8px;
 }
 
 .location-btn{
@@ -172,100 +175,153 @@ html, body{
   text-decoration:none;
   border:1px solid #b58b4b;
   border-radius:30px;
-  padding:10px 24px;
-  background:rgba(255,255,255,.48);
+  padding:8px 22px;
+  background:rgba(255,255,255,.55);
+  font-size:17px;
+  margin:4px 0 8px;
 }
 
-
-
-@media(max-width:768px){
-  .page-one-content h1{
-    font-size:56px;
-    margin-top:90px;
-  }
-
-  .matter{
-    padding-top:30px;
-  }
-
-  .matter h1{
-    font-size:44px;
-  }
-
-  .date,
-  .muhurat{
-    font-size:17px;
-  }
-
-  #countdown{
-    gap:10px;
-  }
-
-  #countdown span{
-    font-size:23px;
-  }
-
-}
-
-.marathi-matter{
-  color:#6d3f12;
-  justify-content:center;
-  padding-top:20px;
-}
-
-.marathi-matter .ganesh{
-  font-size:13px;
-  margin-bottom:4px;
-}
-
-.marathi-matter .intro{
-  font-size:13px;
-  line-height:1.5;
-  margin:12px 0;
-}
-
-.marathi-matter h1{
-  font-family:'Cormorant Garamond', serif;
-  font-size:30px;
-  font-weight:600;
-  margin:8px 0;
-}
-
-.marathi-matter h2{
-  font-size:34px;
-  margin:14px 0;
-  color:#8b0000;
-}
-
-.parent{
-  font-size:12px;
-  line-height:1.4;
-}
-
-.and{
-  font-size:18px;
-  margin:8px 0;
-}
-
-.main-text{
-  font-size:13px;
-  line-height:1.65;
-  margin:10px 0;
-}
-
-.venue-title{
-  font-size:15px;
-  font-weight:600;
-  margin-top:12px;
-}
-
-.venue{
-  font-size:12px;
-  line-height:1.5;
+.no-gift{
+  font-size:10.5px;
+  line-height:1.35;
+  margin-top:4px;
 }
 
 .family{
-  font-size:13px;
-  margin-top:14px;
-  line-height:1.5;
+  font-size:11px;
+  line-height:1.35;
+  margin-top:7px;
+}
+
+/* MOBILE TUNING */
+
+@media(max-width:768px){
+
+  .page-one-content h1{
+    font-size:40px;
+    margin-top:70px;
+  }
+
+  .matter{
+    top:7.2%;
+    width:70%;
+    max-width:360px;
+  }
+
+  .ganesh{
+    font-size:11px;
+  }
+
+  .intro{
+    font-size:10.5px;
+    margin:6px 0 8px;
+  }
+
+  .name{
+    font-size:24px;
+  }
+
+  .parent{
+    font-size:10px;
+  }
+
+  .and{
+    font-size:15px;
+    margin:5px 0;
+  }
+
+  .title{
+    font-size:30px;
+    margin:10px 0 14px;
+  }
+
+  .main-text{
+    font-size:11.2px;
+    line-height:1.45;
+    margin:8px 0;
+  }
+
+  .venue-title{
+    font-size:13px;
+  }
+
+  .venue{
+    font-size:10.2px;
+  }
+
+  .location-btn{
+    font-size:15px;
+    padding:7px 20px;
+  }
+
+  .no-gift{
+    font-size:9.6px;
+  }
+
+  .family{
+    font-size:10px;
+  }
+}
+
+@media(max-height:720px){
+
+  .matter{
+    top:6.6%;
+    width:72%;
+  }
+
+  .ganesh{
+    font-size:10px;
+  }
+
+  .intro{
+    font-size:9.8px;
+    margin:4px 0 6px;
+  }
+
+  .name{
+    font-size:21px;
+    margin:3px 0;
+  }
+
+  .parent{
+    font-size:9px;
+  }
+
+  .and{
+    font-size:13px;
+    margin:4px 0;
+  }
+
+  .title{
+    font-size:27px;
+    margin:8px 0 10px;
+  }
+
+  .main-text{
+    font-size:10px;
+    line-height:1.35;
+    margin:6px 0;
+  }
+
+  .venue-title{
+    font-size:12px;
+    margin-top:8px;
+  }
+
+  .venue{
+    font-size:9.2px;
+    line-height:1.3;
+  }
+
+  .location-btn{
+    font-size:13px;
+    padding:6px 18px;
+    margin:2px 0 5px;
+  }
+
+  .no-gift,
+  .family{
+    font-size:8.8px;
+  }
 }
