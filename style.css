@@ -6,7 +6,7 @@
 
 html, body{
   width:100%;
-  min-height:100%;
+  height:100%;
   background:#000;
   overflow:hidden;
 }
@@ -51,22 +51,21 @@ html, body{
 
 .page-one-content h1{
   font-family:'Yatra One', serif;
-  font-size:48px;
+  font-size:42px;
   line-height:1.35;
   font-weight:400;
   margin-top:80px;
-  margin-bottom:36px;
-  text-shadow:0 2px 8px rgba(255,255,255,.45);
+  margin-bottom:34px;
 }
 
 .open-btn{
   border:none;
-  padding:13px 32px;
+  padding:12px 30px;
   border-radius:40px;
   background:linear-gradient(135deg, #d9a441, #8b5a12);
   color:white;
   font-family:'Tiro Devanagari Marathi', serif;
-  font-size:18px;
+  font-size:17px;
   cursor:pointer;
   box-shadow:0 10px 24px rgba(0,0,0,.25);
   z-index:20;
@@ -87,86 +86,88 @@ html, body{
   z-index:1;
 }
 
-/* IMPORTANT: content box aligned inside white arch space */
+/* THIS IS THE IMPORTANT FIX */
 
 .matter{
   position:absolute;
   z-index:5;
 
-  top:7.8%;
+  top:7.3%;
   left:50%;
   transform:translateX(-50%);
 
-  width:68%;
-  max-width:405px;
+  width:58%;
+  max-width:340px;
+  height:76vh;
+
+  overflow:hidden;
 
   text-align:center;
   color:#6d3f12;
-
   font-family:'Tiro Devanagari Marathi', serif;
 }
 
-/* TEXT SIZING */
+/* TEXT */
 
 .ganesh{
-  font-size:12px;
-  line-height:1.25;
-  margin-bottom:2px;
+  font-size:10.2px;
+  line-height:1.15;
+  margin-bottom:1px;
 }
 
 .intro{
-  font-size:11.5px;
-  line-height:1.35;
-  margin:7px 0 10px;
+  font-size:9.8px;
+  line-height:1.25;
+  margin:6px 0 8px;
 }
 
 .name{
   font-family:'Yatra One', serif;
-  font-size:27px;
-  line-height:1.2;
+  font-size:22px;
+  line-height:1.08;
   font-weight:400;
-  margin:5px 0;
+  margin:4px 0;
   color:#6d3f12;
 }
 
 .parent{
-  font-size:11px;
-  line-height:1.35;
-  margin-bottom:5px;
+  font-size:9.6px;
+  line-height:1.25;
+  margin-bottom:4px;
 }
 
 .and{
-  font-size:17px;
+  font-size:14px;
   line-height:1;
-  margin:7px 0;
+  margin:5px 0;
 }
 
 .title{
   font-family:'Yatra One', serif;
-  font-size:34px;
-  line-height:1.1;
-  margin:12px 0 18px;
+  font-size:31px;
+  line-height:1;
+  margin:9px 0 14px;
   color:#8b1111;
   font-weight:400;
 }
 
 .main-text{
-  font-size:12.5px;
-  line-height:1.55;
-  margin:9px 0;
+  font-size:10.7px;
+  line-height:1.43;
+  margin:7px 0;
 }
 
 .venue-title{
-  font-size:15px;
+  font-size:13px;
   font-weight:600;
-  margin-top:13px;
-  margin-bottom:4px;
+  margin-top:10px;
+  margin-bottom:3px;
 }
 
 .venue{
-  font-size:11.5px;
-  line-height:1.42;
-  margin-bottom:8px;
+  font-size:9.7px;
+  line-height:1.32;
+  margin-bottom:6px;
 }
 
 .location-btn{
@@ -175,117 +176,44 @@ html, body{
   text-decoration:none;
   border:1px solid #b58b4b;
   border-radius:30px;
-  padding:8px 22px;
+  padding:6px 18px;
   background:rgba(255,255,255,.55);
-  font-size:17px;
-  margin:4px 0 8px;
+  font-size:14px;
+  margin:3px 0 6px;
 }
 
 .no-gift{
-  font-size:10.5px;
-  line-height:1.35;
-  margin-top:4px;
+  font-size:9.2px;
+  line-height:1.25;
+  margin-top:2px;
 }
 
-.family{
-  font-size:11px;
-  line-height:1.35;
-  margin-top:7px;
-}
-
-/* MOBILE TUNING */
+/* PHONE SIZE */
 
 @media(max-width:768px){
 
-  .page-one-content h1{
-    font-size:40px;
-    margin-top:70px;
-  }
-
   .matter{
-    top:7.2%;
-    width:70%;
-    max-width:360px;
+    top:7.1%;
+    width:60%;
+    max-width:310px;
+    height:75vh;
   }
 
   .ganesh{
-    font-size:11px;
+    font-size:9.5px;
   }
 
   .intro{
-    font-size:10.5px;
-    margin:6px 0 8px;
+    font-size:9.2px;
+    margin:5px 0 7px;
   }
 
   .name{
-    font-size:24px;
+    font-size:20px;
   }
 
   .parent{
-    font-size:10px;
-  }
-
-  .and{
-    font-size:15px;
-    margin:5px 0;
-  }
-
-  .title{
-    font-size:30px;
-    margin:10px 0 14px;
-  }
-
-  .main-text{
-    font-size:11.2px;
-    line-height:1.45;
-    margin:8px 0;
-  }
-
-  .venue-title{
-    font-size:13px;
-  }
-
-  .venue{
-    font-size:10.2px;
-  }
-
-  .location-btn{
-    font-size:15px;
-    padding:7px 20px;
-  }
-
-  .no-gift{
-    font-size:9.6px;
-  }
-
-  .family{
-    font-size:10px;
-  }
-}
-
-@media(max-height:720px){
-
-  .matter{
-    top:6.6%;
-    width:72%;
-  }
-
-  .ganesh{
-    font-size:10px;
-  }
-
-  .intro{
-    font-size:9.8px;
-    margin:4px 0 6px;
-  }
-
-  .name{
-    font-size:21px;
-    margin:3px 0;
-  }
-
-  .parent{
-    font-size:9px;
+    font-size:8.8px;
   }
 
   .and{
@@ -294,34 +222,86 @@ html, body{
   }
 
   .title{
-    font-size:27px;
-    margin:8px 0 10px;
+    font-size:28px;
+    margin:8px 0 12px;
   }
 
   .main-text{
-    font-size:10px;
-    line-height:1.35;
+    font-size:9.9px;
+    line-height:1.38;
     margin:6px 0;
   }
 
   .venue-title{
     font-size:12px;
-    margin-top:8px;
   }
 
   .venue{
-    font-size:9.2px;
-    line-height:1.3;
+    font-size:8.9px;
   }
 
   .location-btn{
     font-size:13px;
-    padding:6px 18px;
-    margin:2px 0 5px;
+    padding:5px 16px;
   }
 
-  .no-gift,
-  .family{
-    font-size:8.8px;
+  .no-gift{
+    font-size:8.5px;
+  }
+}
+
+/* SMALL HEIGHT PHONES */
+
+@media(max-height:720px){
+
+  .matter{
+    top:6.8%;
+    width:62%;
+    height:74vh;
+  }
+
+  .ganesh{
+    font-size:8.5px;
+  }
+
+  .intro{
+    font-size:8.2px;
+    margin:4px 0 5px;
+  }
+
+  .name{
+    font-size:18px;
+  }
+
+  .parent{
+    font-size:8px;
+  }
+
+  .title{
+    font-size:24px;
+    margin:6px 0 8px;
+  }
+
+  .main-text{
+    font-size:8.7px;
+    line-height:1.28;
+    margin:5px 0;
+  }
+
+  .venue-title{
+    font-size:10.5px;
+  }
+
+  .venue{
+    font-size:7.8px;
+  }
+
+  .location-btn{
+    font-size:11.5px;
+    padding:4px 14px;
+  }
+
+  .no-gift{
+    font-size:7.6px;
   }
 }
