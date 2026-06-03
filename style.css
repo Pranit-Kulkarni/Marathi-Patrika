@@ -87,13 +87,11 @@ html, body{
   z-index:1;
 }
 
-/* FITTED CONTENT */
-
 .matter{
   position:absolute;
   z-index:5;
 
-  top:15.6%;
+  top:17%;
   left:50%;
   transform:translateX(-50%);
 
@@ -120,7 +118,7 @@ html, body{
 }
 
 .name{
-  font-size:36px;
+  font-size:34px;
   line-height:1.08;
   font-weight:800;
   margin:4px 0;
@@ -142,7 +140,7 @@ html, body{
 }
 
 .title{
-  font-size:52px;
+  font-size:49px;
   line-height:1;
   margin:10px 0 15px;
   color:#8b1111;
@@ -150,21 +148,21 @@ html, body{
 }
 
 .main-text{
-  font-size:14.2px;
+  font-size:13.5px;
   line-height:1.5;
   margin:7px 0;
   font-weight:600;
 }
 
 .venue-title{
-  font-size:18px;
+  font-size:17px;
   font-weight:800;
   margin-top:10px;
   margin-bottom:3px;
 }
 
 .venue{
-  font-size:12.9px;
+  font-size:12px;
   line-height:1.38;
   margin-bottom:8px;
   font-weight:600;
@@ -199,7 +197,7 @@ html, body{
   }
 
   .matter{
-    top:15.8%;
+    top:17%;
     width:77%;
     max-width:390px;
   }
@@ -210,7 +208,7 @@ html, body{
   }
 
   .name{
-    font-size:31px;
+    font-size:30px;
   }
 
   .parent{
@@ -224,23 +222,23 @@ html, body{
   }
 
   .title{
-    font-size:45px;
+    font-size:43px;
     margin:9px 0 12px;
   }
 
   .main-text{
-    font-size:12.4px;
+    font-size:12px;
     line-height:1.42;
     margin:6px 0;
   }
 
   .venue-title{
-    font-size:16px;
+    font-size:15px;
     margin-top:8px;
   }
 
   .venue{
-    font-size:11px;
+    font-size:10.5px;
     line-height:1.33;
     margin-bottom:6px;
   }
