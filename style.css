@@ -11,12 +11,6 @@ html, body{
   overflow:hidden;
 }
 
-.small-and{
-  font-size:30px;
-  font-weight:700;
-  line-height:1.2;
-}
-
 .page{
   position:fixed;
   inset:0;
@@ -56,12 +50,21 @@ html, body{
 }
 
 .page-one-content h1{
-  font-family:'Noto Serif Devanagari', serif;
-  font-size:52px;
-  line-height:1.3;
-  font-weight:800;
-  margin-top:80px;
+  font-family:'Tiro Devanagari Marathi', 'Noto Serif Devanagari', serif;
+  font-size:56px;
+  line-height:1.18;
+  font-weight:400;
+  margin-top:78px;
   margin-bottom:34px;
+  letter-spacing:.2px;
+  text-shadow:0 2px 5px rgba(255,255,255,.35);
+}
+
+.small-and{
+  font-family:'Noto Serif Devanagari', serif;
+  font-size:30px;
+  line-height:1.1;
+  font-weight:700;
 }
 
 .open-btn{
@@ -97,15 +100,15 @@ html, body{
   position:absolute;
   z-index:5;
 
-  top:17%;
+  top:13.2%;
   left:50%;
   transform:translateX(-50%);
 
-  width:76%;
+  width:80%;
   max-width:470px;
 
   text-align:center;
-  color:#6d3f12;
+  color:#3d250f;
   font-family:'Noto Serif Devanagari', serif;
 
   display:flex;
@@ -116,61 +119,106 @@ html, body{
   overflow:visible;
 }
 
-.intro{
+/* BLESSINGS */
+
+.blessing{
+  width:100%;
+  margin-bottom:7px;
+  font-family:'Noto Serif Devanagari', serif;
+  font-weight:700;
+  color:#4b250c;
+}
+
+.ganesh-line{
+  font-size:12.6px;
+  line-height:1.25;
+  text-align:center;
+  margin-bottom:5px;
+  font-weight:700;
+}
+
+.side-blessings{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   font-size:12.2px;
+  line-height:1.2;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+/* BODY TEXT */
+
+.intro{
+  font-size:12.8px;
   line-height:1.35;
-  margin-bottom:9px;
+  margin-bottom:8px;
   font-weight:600;
 }
 
 .name{
-  font-size:34px;
-  line-height:1.08;
-  font-weight:800;
+  font-family:'Tiro Devanagari Marathi', 'Noto Serif Devanagari', serif;
+  font-size:39px;
+  line-height:1.02;
+  font-weight:400;
   margin:4px 0;
-  color:#6d3f12;
+  color:#5a260e;
+  letter-spacing:.2px;
 }
 
 .parent{
-  font-size:12.4px;
-  line-height:1.35;
-  margin-bottom:7px;
+  font-size:12.8px;
+  line-height:1.3;
+  margin-bottom:6px;
   font-weight:600;
 }
 
 .and{
   font-size:20px;
   line-height:1;
-  margin:5px 0;
+  margin:3px 0;
   font-weight:700;
-}
-
-.title{
-  font-size:49px;
-  line-height:1;
-  margin:10px 0 15px;
-  color:#8b1111;
-  font-weight:800;
+  color:#5a260e;
 }
 
 .main-text{
-  font-size:13.5px;
-  line-height:1.5;
-  margin:7px 0;
+  font-size:13.2px;
+  line-height:1.36;
+  margin:5px 0;
   font-weight:600;
 }
 
+.title{
+  font-family:'Tiro Devanagari Marathi', 'Noto Serif Devanagari', serif;
+  font-size:55px;
+  line-height:1;
+  margin:5px 0;
+  color:#8b1111;
+  font-weight:400;
+  letter-spacing:.3px;
+}
+
+.family{
+  font-size:12.6px;
+  line-height:1.3;
+  margin:7px 0 6px;
+  font-weight:700;
+}
+
 .venue-title{
-  font-size:17px;
+  font-size:16.5px;
+  line-height:1.2;
   font-weight:800;
-  margin-top:10px;
+  margin-top:6px;
   margin-bottom:3px;
+  color:#5a260e;
 }
 
 .venue{
-  font-size:12px;
-  line-height:1.38;
-  margin-bottom:8px;
+  font-size:12.3px;
+  line-height:1.32;
+  margin-bottom:7px;
   font-weight:600;
 }
 
@@ -180,18 +228,19 @@ html, body{
   text-decoration:none;
   border:1px solid #b58b4b;
   border-radius:34px;
-  padding:7px 24px;
+  padding:6px 20px;
   background:rgba(255,255,255,.72);
-  font-size:16px;
+  font-size:13px;
   font-weight:800;
-  margin:4px 0 7px;
+  margin:3px 0 6px;
 }
 
-.no-gift{
-  font-size:11.7px;
-  line-height:1.3;
+.aher{
+  font-size:11.8px;
+  line-height:1.22;
   margin-top:2px;
-  font-weight:600;
+  font-weight:700;
+  max-width:94%;
 }
 
 /* PHONE */
@@ -199,66 +248,100 @@ html, body{
 @media(max-width:768px){
 
   .page-one-content h1{
-    font-size:49px;
+    font-size:52px;
+    line-height:1.16;
+    margin-top:74px;
   }
 
   .small-and{
-  font-size:28px;
-}
+    font-size:28px;
+  }
 
   .matter{
-    top:20%;
-    width:77%;
+    top:10%;
+    width:84%;
     max-width:390px;
   }
 
+  .blessing{
+    margin-bottom:5px;
+  }
+
+  .ganesh-line{
+    font-size:11.4px;
+    line-height:1.2;
+    margin-bottom:4px;
+  }
+
+  .side-blessings{
+    font-size:10.9px;
+    line-height:1.15;
+    width:92%;
+  }
+
   .intro{
-    font-size:12px;
-    margin-bottom:8px;
-  }
-
-  .name{
-    font-size:31px;
-  }
-
-  .parent{
-    font-size:12px;
+    font-size:11.5px;
+    line-height:1.26;
     margin-bottom:6px;
   }
 
+  .name{
+    font-size:34px;
+    line-height:1;
+    margin:2px 0;
+  }
+
+  .parent{
+    font-size:11.2px;
+    line-height:1.22;
+    margin-bottom:5px;
+  }
+
   .and{
-    font-size:19px;
+    font-size:18px;
+    margin:2px 0;
+  }
+
+  .main-text{
+    font-size:11.5px;
+    line-height:1.25;
     margin:4px 0;
   }
 
   .title{
-    font-size:44px;
-    margin:9px 0 12px;
+    font-size:49px;
+    line-height:1;
+    margin:3px 0;
   }
 
-  .main-text{
-    font-size:13px;
-    line-height:1.42;
-    margin:6px 0;
+  .family{
+    font-size:11.2px;
+    line-height:1.22;
+    margin:5px 0 5px;
   }
 
   .venue-title{
-    font-size:16px;
-    margin-top:8px;
+    font-size:14.6px;
+    margin-top:5px;
+    margin-bottom:2px;
   }
 
   .venue{
-    font-size:11.5px;
-    line-height:1.33;
-    margin-bottom:6px;
+    font-size:10.9px;
+    line-height:1.22;
+    margin-bottom:5px;
   }
 
   .location-btn{
-    font-size:15px;
-    padding:6px 20px;
+    font-size:12px;
+    padding:5px 16px;
+    margin:2px 0 5px;
   }
 
-  .no-gift{
-    font-size:11px;
+  .aher{
+    font-size:10.8px;
+    line-height:1.18;
+    margin-top:2px;
+    max-width:90%;
   }
 }
